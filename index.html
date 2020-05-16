@@ -8,13 +8,18 @@
 
 <body>
   <header class="main-header">
-    <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Лого сайта Device">
-    <input type="search" placeholder="Поиск по сайту" />
-    <button class="login">Войти</button>
-    <button class="compare">Сравнить</button>
-    <button class="shopping-cart">Корзина</button>
-
+    <a class="site-logo" href="">Device</a>
+    <section class="supp-nav">
+      <h2 class="visually-hidden">Пользовательская навигация</h2>
+      <input type="search" placeholder="Поиск по сайту" />
+      <ul class="supp-nav-user">
+        <li><button class="login">Войти</button></li>
+      </ul>
+      <button class="supp-nav-compare">Сравнить</button>
+      <button class="supp-nav-cart">Корзина</button>
+    </section>
     <nav class="main-nav">
+      <h2 class="visually-hidden">Навигация по сайту</h2>
       <ul>
         <li><a href="products.html">Каталог товаров</a></li>
         <li><a href="#">Доставка</a></li>
@@ -25,10 +30,11 @@
   </header>
 
   <main>
+    <h1 class="visually-hidden">Магазин гаджетов "Device"</h1>
     <section class="selfie-stick">
-      <h1 class="visually-hidden">Самая длинная палка для селфи</h1>
+      <h2 class="visually-hidden">Самая длинная палка для селфи</h2>
       <img src="https://via.placeholder.com/384x486" alt="Длинная селфи палка" width="384" height="486" />
-      <h2>Делай селфи, как Бен Стиллер!</h2>
+      <h3>Делай селфи, как Бен Стиллер!</h3>
       <p>
         Самая длинная палка для селфи доступна в нашем магазине. Восемь
         (Восемь, Карл!) метров длиной и весом всего 5 килограмм
@@ -49,8 +55,119 @@
     </section>
 
     <section class="product-line">
-      <ul></ul>
+      <h2 class="visually-hidden">Наш Ассортимент</h2>
+      <ul>
+        <li class="product-line-item">
+          <a href="">
+            <img src="https://via.placeholder.com/160x160" width="160" height="160" alt="Очки виртуальной реальности">
+            <h3>Виртуальная реальность</h3>
+          </a>
+        </li>
+        <li class="product-line-item">
+          <a href="">
+            <img src="https://via.placeholder.com/160x160" width="160" height="160" alt="Моноподы для селфи">
+            <h3>Моноподы для селфи</h3>
+          </a>
+        </li>
+        <li class="product-line-item">
+          <a href="">
+            <img src="https://via.placeholder.com/160x160" width="160" height="160" alt="Экшн-камеры">
+            <h3>Экшн-камеры</h3>
+          </a>
+        </li>
+        <li class="product-line-item">
+          <a href="">
+            <img src="https://via.placeholder.com/160x160" width="160" height="160" alt="Фитнес-браслет">
+            <h3>Фитнес-браслеты</h3>
+          </a>
+        </li>
+        <li class="product-line-item">
+          <a href="">
+            <img src="https://via.placeholder.com/160x160" width="160" height="160" alt="Умные часы">
+            <h3>Умные часы</h3>
+          </a>
+        </li>
+        <li class="product-line-item">
+          <a href="">
+            <img src="https://via.placeholder.com/160x160" width="160" height="160" alt="Квадрокоптеры">
+            <h3>Квадрокоптеры</h3>
+          </a>
+        </li>
+      </ul>
     </section>
+
+    <section class="services-nav">
+      <h2 class="visually-hidden">Наши услуги</h2>
+      <ul>
+        <li class="services-nav-item"><a href="">Доставка</a></li>
+        <li class="services-nav-item"><a href="">Доставка</a></li>
+        <li class="services-nav-item"><a href="">Доставка</a></li>
+      </ul>
+      <h3 class="services-nav-heading">Доставка</h3>
+      <p class="services-nav-descr">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+        Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+    </section>
+
+    <section class="partners">
+      <h2 class="visually-hidden">Наши партнеры</h2>
+      <ul>
+        <li><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Лого Dji"></li>
+        <li><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Лого SP Gadjets"></li>
+        <li><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Лого Go Pro"></li>
+        <li><img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Лого Vive"></li>
+      </ul>
+    </section>
+
+    <section class="about-us">
+      <h2 class="about-us-heading">О нас</h2>
+      <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
+        компаниями:</p>
+      <ul>
+        <li>Деловые линни</li>
+        <li>Автотрейдинг</li>
+        <li>ЖелДорЭкспедиция</li>
+      </ul>
+      <a href="">Подробнее о нас</a>
+    </section>
+
+    <section class="our-contacts">
+      <h2>Контакты</h2>
+      <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
+        бывает.</p>
+      <a href=""><img src="https://via.placeholder.com/560x222" width="560" height="222"
+          alt="Наше расположение на карте"></a>
+      <a href="">Напишите нам</a>
+    </section>
+
+    <footer class="main-footer">
+      <ul class="main-footer-profile">
+        <li><a href="">Войти</a></li>
+      </ul>
+      <a class="compare" href="">Сравнить</a>
+      <a class="shopping cart" href="">Корзина</a>
+      <a class="site-logo" href="">Device</a>
+      <p class="main-footer-address">г. Москва, ул. Строителей, 15</p>
+      <ul class="main-footer-nav">
+        <li><a href="">Доставка</a></li>
+        <li><a href="">Гарантия</a></li>
+        <li><a href="">Контакты</a></li>
+      </ul>
+      <p class="main-footer-phone">Тел.: +7 (495) 495-95-95</p>
+      <ul class="social-icons">
+        <li>
+          <a href=""><img src="https://via.placeholder.com/32x32" width="32" height="32" alt="Facebook"></a>
+        </li>
+        <li>
+          <a href=""><img src="https://via.placeholder.com/32x32" width="32" height="32" alt="Instagram"></a>
+        </li>
+        <li>
+          <a href=""><img src="https://via.placeholder.com/32x32" width="32" height="32" alt="Twitter"></a>
+        </li>
+      </ul>
+
+      <a href=""><img src="https://via.placeholder.com/30x34" width="30" height="34" alt="HTML Academy"></a>
+    </footer>
   </main>
 </body>
 
