@@ -1,0 +1,366 @@
+/* FONTS */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroylight.woff2") format("woff2");
+  src: url("../fonts/gilroylight.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2");
+  src: url("../fonts/gilroyextrabold.woff") format("woff");
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Open-Sans";
+  src: url("../fonts/opensans.woff2") format("woff2");
+  src: url("../fonts/opensans.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Open-Sans";
+  src: url("../fonts/opensanslight.woff2") format("woff2");
+  src: url("../fonts/opensanslight.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* BASIC COLORS */
+:root {
+  --basic-dark: #363636;
+  --basic-white: #ffffff;
+  --basic-grey: #464646;
+  --basic-half-grey: #7e7e7e;
+  --basic-grey-light: #e5e5e5;
+  --special-yellow: #f7e296;
+  --special-yellow-dark: #f0c52e;
+  --special-green: #91c92f;
+  --basic-black: #000000;
+  --font-gilroy: "Gilroy", "Tahoma", sans-serif;
+  --font-open-sans: "Open Sans", "Trebuchet MS", sans-serif;
+}
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-open-sans);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+/* GENERAL */
+
+.main-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.sub-container {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.no-bullets {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.basic-link-md {
+  font-family: var(--font-gilroy);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
+.basic-link-sm {
+  font-family: var(--font-open-sans);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
+.main-heading {
+  font-family: var(--font-gilroy);
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+
+/* Header */
+.main-header {
+  padding-top: 44px;
+  padding-bottom: 50px;
+  width: 100%;
+  min-height: 92px;
+  background-color: var(--special-yellow);
+}
+
+/* Sup-nav */
+.sup-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sup-nav .sup-nav-user,
+.sup-nav .sup-nav-products {
+  display: flex;
+}
+
+/* main-nav */
+.main-nav .nav-link {
+  text-transform: uppercase;
+}
+
+/* INDEX.HTML */
+
+/* Slider */
+
+.card {
+  outline: 2px solid blue; /* DELETE */
+  outline-offset: 2px; /* DELETE */
+}
+
+.card .learn-more {
+  text-transform: uppercase;
+}
+.card-features-value th {
+  font-family: var(--font-gilroy);
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+}
+
+.card-features-descr td {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+/* Product line */
+.product-line {
+  outline: 2px solid coral;
+}
+
+.product-line ul {
+  display: flex;
+}
+
+/* Services */
+.services .service-name {
+  text-transform: uppercase;
+}
+
+.services .main-heading {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.services .descr {
+  line-height: 28px;
+  letter-spacing: 0.1em;
+}
+
+/* About Us */
+.about-us .main-heading {
+  letter-spacing: 0.2em;
+}
+
+.about-us .descr {
+  line-height: 28px;
+}
+
+.about-us .partners {
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.about-us .learn-more {
+  text-transform: uppercase;
+}
+
+/* Our Contacts */
+
+.our-contacts .descr {
+  line-height: 28px;
+}
+.our-contacts .basic-link-md {
+  text-transform: uppercase;
+}
+
+/* Footer */
+
+.main-footer {
+  width: 100%;
+  min-height: 324px;
+  background-color: var(--basic-dark);
+}
+/* \top */
+
+.main-footer-top .basic-link-sm {
+  color: var(--basic-white);
+  opacity: 0.7;
+}
+
+/* \ center */
+.main-footer-center .address {
+  margin: 0;
+  color: var(--basic-white);
+}
+
+.main-footer-center .footer-nav-link {
+  color: var(--basic-white);
+  text-transform: uppercase;
+}
+
+.main-footer-center .phone {
+  color: var(--basic-white);
+}
+
+/* \ bottom */
+.social-icons svg {
+  opacity: 0.3;
+}
+
+/* CATALOG.HTML */
+/* Products wrapper */
+.products-wrapper {
+  display: grid;
+  grid-template-columns: 328px 760px;
+  grid-template-rows: min-content min-content;
+  grid-column-gap: 72px;
+  grid-row-gap: 70px;
+}
+
+.top-sorting .sorting-heading,
+.side-filters .filters-heading {
+  font-family: var(--font-gilroy);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* side filters */
+.side-filters {
+  grid-row: 1/-1;
+}
+
+.side-filters .filters-heading {
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  outline: 1px solid coral; /* DELETE */
+}
+
+.side-filters .filter-item {
+  border: 0;
+  border-top: 2px solid var(--basic-black);
+  padding: 0;
+}
+
+.side-filters form {
+  padding-top: 70px;
+  padding-right: 68px;
+  outline: 1px solid green; /* DELETE */
+}
+.filter-item legend {
+  font-family: var(--font-gilroy);
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+}
+
+.filter-item label {
+  font-family: var(--font-open-sans);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+/* \ top sorting */
+.top-sorting {
+  display: flex;
+  padding: 25px 0;
+  outline: 1px solid blue; /* DELETE */
+}
+
+.top-sorting .sorting-heading {
+  margin: 0;
+  margin-right: 74px;
+}
+.top-sorting .sorting-label {
+  font-family: var(--font-open-sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Catalog */
+
+.catalog ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 30px;
+}
+
+.catalog-item {
+  width: 360px;
+  outline: 1px solid red; /* DELETE */
+}
+
+.catalog-item .catalog-item-name {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  width: 276px;
+}
+
+.catalog-item-name .basic-link-md {
+  letter-spacing: 0.05em;
+}
+
+.catalog-item .catalog-item-price {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  font-family: var(--font-gilroy);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
