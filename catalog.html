@@ -101,7 +101,7 @@
 			<div class="products-wrapper">
 				<section class="side-filters">
 					<h2 class="filters-heading">Фильтр:</h2>
-					<form method="post">
+					<form action="https://echo.htmlacademy.ru/" method="post">
 						<fieldset class="filter-price filter-item">
 							<h3 class="filter-legend">Стоимость</h3>
 							<div>Слайдер</div> <!-- DELETE -->
@@ -109,23 +109,23 @@
 						<fieldset class="filter-color filter-item">
 							<h3 class="filter-legend">Цвет</h3>
 							<p>
-								<input id="color-black" type="checkbox" value="color-black">
+								<input id="color-black" type="checkbox" value="color-black" name="filter-color">
 								<label class="filter-name" for="color-black">Черный</label>
 							</p>
 							<p>
-								<input id="color-white" type="checkbox" value="color-white">
+								<input id="color-white" type="checkbox" value="color-white" name="filter-color">
 								<label class="filter-name" for="color-white">Белый</label>
 							</p>
 							<p>
-								<input id="color-blue" type="checkbox" value="color-blue">
+								<input id="color-blue" type="checkbox" value="color-blue" name="filter-color">
 								<label class="filter-name" for="color-blue">Синий</label>
 							</p>
 							<p>
-								<input id="color-red" type="checkbox" value="color-red">
+								<input id="color-red" type="checkbox" value="color-red" name="filter-color">
 								<label class="filter-name" for="color-red">Красный</label>
 							</p>
 							<p>
-								<input id="color-pink" type="checkbox" value="color-pink">
+								<input id="color-pink" type="checkbox" value="color-pink" name="filter-color">
 								<label class="filter-name" for="color-pink">Розовый</label>
 							</p>
 						</fieldset>
@@ -140,7 +140,7 @@
 								<label class="filter-name" for="bluetooth-no">Нет</label>
 							</p>
 						</fieldset>
-						<button class="submit-button basic-link-md" type="submit"
+						<button class="submit-button basic-link-md link-decor" type="submit"
 							aria-label="Показать товары с учетом выбранных фильтров">Показать</button>
 					</form>
 				</section>

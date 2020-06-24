@@ -18,6 +18,7 @@
   --special-yellow-dark: #f0c52e;
   --special-green: #91c92f;
   --basic-black: #000000;
+  --basic-black-transparent: rgba(0, 0, 0, 0.3);
   --font-gilroy: "Gilroy", "Tahoma", sans-serif;
   --font-open-sans: "Open-Sans", "Trebuchet MS", sans-serif;
   --scroll-bar-width: calc(100vw - (100vw - 100%));
@@ -65,6 +66,7 @@ body {
   list-style: none;
 }
 .basic-link-md {
+  position: relative;
   text-decoration: none;
   line-height: 22px;
   letter-spacing: 0.2em;
@@ -74,12 +76,36 @@ body {
   font-weight: 800;
 }
 .basic-link-sm {
+  position: relative;
   text-decoration: none;
   line-height: 20px;
   color: var(--basic-black);
   font-family: var(--font-open-sans);
   font-size: 15px;
   font-weight: 300;
+}
+.link-decor {
+  padding: 9px 44px;
+}
+.link-decor::before {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 8px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  background-color: var(--special-yellow-dark);
+  transition: 0.4s;
+}
+.link-decor:hover::before {
+  height: 100%;
+  background-color: var(--special-yellow-dark);
+}
+.link-decor:active {
+  color: var(--basic-black-transparent);
 }
 .main-heading {
   margin: 0;
@@ -221,6 +247,7 @@ body {
   position: relative;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
   padding-top: 80px;
 }
 .card img {
@@ -326,6 +353,8 @@ body {
 .product-name a {
   display: block;
   padding-top: 170px;
+  padding-left: 0;
+  padding-right: 0;
   letter-spacing: 0.05em;
 }
 /* Services */
@@ -373,8 +402,8 @@ body {
   outline: 1px solid coral;
   padding-top: 9px;
   padding-bottom: 9px;
+  padding-right: 20px;
   padding-left: 20px;
-  width: 100%;
   vertical-align: middle;
   text-align: left;
   text-transform: uppercase;
@@ -452,6 +481,7 @@ body {
   position: relative;
   outline: 1px solid blue;
   padding-top: 57px;
+  padding-bottom: 20px;
 }
 .index-columns .about-us:before,
 .index-columns .our-contacts:before {
@@ -482,7 +512,7 @@ body {
 /* About Us */
 .about-us .partners {
   margin-top: 60px;
-  margin-bottom: 84px;
+  margin-bottom: 50px;
   line-height: 28px;
   letter-spacing: 0;
   font-size: 15px;
@@ -728,6 +758,8 @@ body {
 }
 /* \\ Submit */
 .side-filters .submit-button {
+  position: relative;
+  z-index: 2;
   border: none;
   background-color: var(--basic-grey-light);
   padding-right: 37px;
