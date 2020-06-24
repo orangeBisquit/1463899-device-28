@@ -349,7 +349,7 @@ body {
 /* Product line */
 .product-line {
   margin-bottom: 49px;
-  outline: 2px solid coral;
+  outline: 2px solid coral; /* DELETE */
 }
 .product-line ul {
   display: flex;
@@ -669,7 +669,16 @@ body {
 .product-line-page .page-item {
   margin-right: 40px;
 }
-.product-line-page .page-name {
+
+.product-line-page .page-item-link {
+  opacity: 0.3;
+}
+
+.product-line-page .page-item-link:hover {
+  opacity: 0.6;
+}
+
+.page-item .product-line-page .page-name {
   margin: 0;
   margin-bottom: 30px;
   line-height: 58px;
@@ -777,14 +786,53 @@ body {
 }
 .filter-color .filter-name {
   display: inline-block;
+  position: relative;
   margin-bottom: 20px;
+  padding-left: 35px;
   vertical-align: middle;
+}
+.filter-input:not(:checked) + .filter-name::before,
+.filter-input:checked + .filter-name::before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 26px;
+  height: 26px;
+  content: "";
+
+  background-repeat: no-repeat;
+}
+.filter-color .filter-input:not(:checked) + .filter-name::before {
+  background-image: url("../img/icons/checkbox-off.svg");
+}
+.filter-input:checked + .filter-name::before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 26px;
+  height: 26px;
+  content: "";
+  background-repeat: no-repeat;
+}
+.filter-color .filter-input:checked + .filter-name::before {
+  background-image: url("../img/icons/checkbox-on.svg");
+}
+.filter-input + .filter-name:hover::before {
+  opacity: 0.6;
+}
+.filter-input + .filter-name:active::before {
+  opacity: 1;
+}
+.filter-input:disabled + .filter-name::before {
+  opacity: 0.25;
 }
 /* \\ Bluetooth */
 .filter-bluetooth .filter-legend {
   margin-bottom: 32px;
 }
-.filter-bluetooth input {
+.filter-bluetooth .filter-input {
   opacity: 0;
   margin: -1px;
   width: 1px;
@@ -792,8 +840,17 @@ body {
 }
 .filter-bluetooth .filter-name {
   display: inline-block;
+  position: relative;
   margin-bottom: 21px;
+  margin-left: 5px;
+  padding-left: 42px;
   vertical-align: middle;
+}
+.filter-bluetooth .filter-input:not(:checked) + .filter-name::before {
+  background-image: url("../img/icons/radio-off.svg");
+}
+.filter-bluetooth .filter-input:checked + .filter-name::before {
+  background-image: url("../img/icons/radio-on.svg");
 }
 /* \\ Submit */
 .side-filters .submit-button {
@@ -836,7 +893,13 @@ body {
   font-size: 14px;
   font-weight: 400;
 }
-.sorting-option-item.option-active {
+.sorting-option-item:hover {
+  opacity: 0.6;
+}
+.sorting-option-item:active {
+  opacity: 1;
+}
+.top-sorting .option-active {
   opacity: 1;
 }
 .sorting-buttons {
