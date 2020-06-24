@@ -9,6 +9,7 @@
 :root {
   --basic-dark: #363636;
   --basic-white: #ffffff;
+  --basic-white-transparent: rgba(255, 255, 255, 0.3);
   --basic-grey: #464646;
   --basic-half-grey: #7e7e7e;
   --basic-grey-light: #e5e5e5;
@@ -140,6 +141,15 @@ body {
   position: absolute;
   top: -65px;
 }
+.main-header .basic-link-md:hover,
+.main-header .basic-link-sm:hover {
+  opacity: 0.6;
+}
+
+.main-header .basic-link-md:active,
+.main-header .basic-link-sm:active {
+  opacity: 0.3;
+}
 /* Sup-nav */
 .main-header .header-sup-nav {
   display: grid;
@@ -153,13 +163,13 @@ body {
 .header-sup-nav .sup-nav-user {
   display: flex;
 }
-.sup-nav-search input {
+.sup-nav-search .search-input {
   outline: none;
   border: 0;
-  border-bottom: 2px solid var(--basic-black);
+  border-bottom: 2px solid var(--special-yellow);
   background-color: var(--special-yellow);
   padding-top: 14px;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
   padding-left: 38px;
   width: 356px;
   line-height: 20px;
@@ -168,23 +178,52 @@ body {
   font-size: 15px;
   font-weight: 300;
 }
-.sup-nav-search input::-webkit-input-placeholder {
+.sup-nav-search .search-input::-webkit-input-placeholder {
   opacity: 0.3;
 }
-.sup-nav-search input::-moz-placeholder {
+.sup-nav-search .search-input::-moz-placeholder {
   opacity: 0.3;
 }
-.sup-nav-search input::placeholder {
+.sup-nav-search .search-input::placeholder {
   opacity: 0.3;
 }
-.sup-nav-search label {
+
+.sup-nav-search .search-input:hover::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+.sup-nav-search .search-input:hover::-moz-placeholder {
+  opacity: 0.6;
+}
+.sup-nav-search .search-input:hover::placeholder {
+  opacity: 0.6;
+}
+
+.sup-nav-search .search-label {
   display: inline-block;
   position: relative;
   right: 5px;
-  border: 2px solid var(--basic-black);
+  border: 2px solid var(--special-yellow);
   padding: 15px 17px;
   width: 84px;
   vertical-align: middle;
+  opacity: 0;
+}
+.sup-nav-search .search-input:focus {
+  border-color: var(--basic-black);
+}
+.search-input:focus + .search-label {
+  border-color: var(--basic-black);
+  opacity: 1;
+}
+.sup-nav-search .search-label:hover {
+  background-color: var(--basic-black);
+  color: var(--basic-white);
+}
+.sup-nav-search .search-label:active {
+  border: 2px solid var(--basic-black);
+  background-color: var(--basic-black);
+  color: var(--basic-white-transparent);
+  opacity: 1;
 }
 /* \\ Sup Nav User */
 .nav-user-item,
