@@ -14,6 +14,7 @@
   --basic-half-grey: #7e7e7e;
   --basic-grey-light: #e5e5e5;
   --basic-grey-semilight: #dcdcdc;
+  --special-hover-grey: #d9d9d9;
   --special-grey: #ebebeb;
   --special-yellow: #f7e296;
   --special-yellow-dark: #f0c52e;
@@ -954,26 +955,47 @@ body {
 .catalog-pages {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 78px;
   background-color: var(--special-grey);
-  padding: 20px 30px;
   width: 100%;
 }
-.catalog-pages .page-nav-item {
-  padding-top: 5px;
-  padding-bottom: 5px;
+/* Prev-Next */
+.page-nav-item .basic-link-md {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 25px 30px;
+}
+.page-nav-item:hover .basic-link-md {
+  background-color: var(--special-hover-grey);
+}
+.page-nav-item:active .basic-link-md {
+  background-color: var(--special-hover-grey);
+  color: var(--basic-black-transparent);
 }
 .catalog-pages .basic-link-md {
   letter-spacing: 0.1em;
 }
+/* Номер страницы */
 .catalog-pages .page-num {
   display: flex;
+  flex-wrap: wrap;
 }
-.page-num-item .basic-link-md {
+.page-num-item a {
   display: inline-block;
-  margin-top: 5px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  margin-left: 5px;
-  padding: 5px 10px;
+  padding: 13px 10px;
+  margin: 12px 10px;
+  opacity: 0.3;
+}
+
+.page-num-item a:hover {
+  opacity: 0.6;
+}
+
+.page-num-item a:active {
+  opacity: 1;
+}
+
+.page-num-item .page-num-current {
+  opacity: 1;
 }
