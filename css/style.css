@@ -1,9 +1,31 @@
 /* FONTS */
 @font-face {
-  font-family: "Open-Sans";
-  font-weight: 400;
+  font-family: "Gilroy";
+  src: url("../fonts/gilroylight.woff2") format("woff2");
+  src: url("../fonts/gilroylight.woff") format("woff");
   font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2");
+  src: url("../fonts/gilroyextrabold.woff") format("woff");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Open-Sans";
+  src: url("../fonts/opensanslight.woff2") format("woff2");
   src: url("../fonts/opensanslight.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Open-Sans";
+  src: url("../fonts/opensans.woff2") format("woff2");
+  src: url("../fonts/opensans.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
 }
 /* BASIC COLORS */
 :root {
@@ -23,8 +45,8 @@
   --basic-black-transparent: rgba(0, 0, 0, 0.3);
   --font-gilroy: "Gilroy", "Tahoma", sans-serif;
   --font-open-sans: "Open-Sans", "Trebuchet MS", sans-serif;
-  --scroll-bar-width: calc(100vw - (100vw - 100%));
 }
+/* Basic Styles */
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   margin: -1px;
@@ -52,7 +74,6 @@ body {
   font-size: 15px;
   font-weight: 300;
 }
-/* GENERAL */
 .main-container {
   margin: 0 auto;
   width: 1160px;
@@ -275,6 +296,9 @@ body {
   margin-bottom: 72px;
 }
 .card {
+  display: none;
+}
+.card-active {
   display: grid;
   grid-template-rows: 506px;
   grid-template-columns: 1fr 1fr;
@@ -282,7 +306,7 @@ body {
   /* DELETE */
   outline-offset: 2px;
 }
-.card .card-text-wrapper {
+.card-active .card-text-wrapper {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -290,22 +314,22 @@ body {
   align-items: flex-start;
   padding-top: 80px;
 }
-.card img {
+.card-active img {
   position: relative;
 }
-.card:nth-child(1) img {
+.card-active:nth-child(1) img {
   top: 20px;
   left: 40px;
 }
-.card:nth-child(2) img {
+.card-active:nth-child(2) img {
   top: 45px;
   left: 55px;
 }
-.card:nth-child(3) img {
+.card-active:nth-child(3) img {
   top: 80px;
   right: 30px;
 }
-.card .slide-number {
+.card-active .slide-number {
   position: absolute;
   top: -15px;
   right: 10px;
@@ -318,20 +342,20 @@ body {
   font-size: 179px;
   font-weight: 800;
 }
-.card .main-heading {
+.card-active .main-heading {
   position: relative;
   z-index: 11;
   margin-bottom: 30px;
 }
-.card .card-descr {
+.card-active .card-descr {
   margin: 0;
   margin-bottom: 60px;
 }
-.card .learn-more {
+.card-active .learn-more {
   margin-bottom: 60px;
   text-transform: uppercase;
 }
-.card table {
+.card-active table {
   align-self: flex-start;
   border-collapse: separate;
 }
@@ -347,6 +371,23 @@ body {
   line-height: 15px;
   font-size: 13px;
 }
+/* \\ Slider buttons */
+.main-slider-buttons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 338px;
+  right: 90px;
+  min-width: 64px;
+}
+.main-slider-buttons .slider-radio {
+  display: block;
+  border: 1px solid red; /* DELETE */
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  font-size: 0;
+}
 /* Product line */
 .product-line {
   margin-bottom: 49px;
@@ -359,11 +400,14 @@ body {
 .product-line .product-line-item {
   width: 160px;
 }
-.product-line .product-name:before {
+.product-line .product-name {
+  position: relative;
+}
+.product-line .product-name::before {
   display: block;
   position: absolute;
-  margin-bottom: 10px;
-  background: var(--special-yellow);
+  z-index: 5;
+  background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: fit;
@@ -390,6 +434,24 @@ body {
 .product-name.drone:before {
   background-image: url("../img/icons/popular-6.svg");
 }
+.product-line-item .product-name:hover::after {
+  background-color: var(--special-yellow-dark);
+}
+.product-name:active span,
+.product-line-item .product-name:active::before {
+  opacity: 0.3;
+}
+.product-line .product-name::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  background: var(--special-yellow);
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
+  content: "";
+}
+
 .product-name a {
   display: block;
   padding-top: 170px;
@@ -883,6 +945,9 @@ body {
 .top-sorting .sorting-heading {
   margin: 0;
   margin-right: 74px;
+}
+.top-sorting .sorting-options {
+  display: flex;
 }
 .top-sorting .sorting-option-item {
   opacity: 0.3;
