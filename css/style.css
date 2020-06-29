@@ -43,6 +43,7 @@
   --special-green: #91c92f;
   --basic-black: #000000;
   --basic-black-transparent: rgba(0, 0, 0, 0.3);
+  --transparent: transparent;
   --font-gilroy: "Gilroy", "Tahoma", sans-serif;
   --font-open-sans: "Open-Sans", "Trebuchet MS", sans-serif;
 }
@@ -109,6 +110,7 @@ body {
 }
 .link-decor {
   padding: 9px 44px;
+  background-color: var(--transparent);
 }
 .link-decor::before {
   display: block;
@@ -487,18 +489,11 @@ body {
   padding: 80px 0;
   min-height: 173px;
 }
-..services-collapse .services-collapse-item {
+.services-collapse .services-collapse-item {
   outline: 1px solid green;
-  width: 160px;
-}
-..services-collapse .collapse-item-active {
   width: 100%;
 }
-.collapse-item-active .service-name {
-  background-color: var(--basic-black);
-  color: var(--special-yellow);
-}
-.services-collapse .service-name {
+.service-name {
   display: inline-block;
   margin-bottom: 20px;
   outline: 1px solid coral;
@@ -510,6 +505,14 @@ body {
   text-align: left;
   text-transform: uppercase;
 }
+.services-collapse .service-name-active {
+  width: 100%;
+  background-color: var(--basic-black);
+  color: var(--special-yellow);
+}
+.service-name:hover {
+  cursor: pointer;
+}
 /* \\ Services Descr */
 .services-descr {
   position: relative;
@@ -517,8 +520,12 @@ body {
   padding-left: 116px;
 }
 .services-descr-item {
+  display: none;
   padding-top: 30px;
   padding-bottom: 25px;
+}
+.services-descr .descr-item-active {
+  display: block;
 }
 .services-descr-item.service-delivery {
   background-image: url("../img/icons/delivery.svg");
