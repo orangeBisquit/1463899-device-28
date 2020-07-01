@@ -10,7 +10,7 @@
 
 <body>
   <div class="main-container">
-    <header class="main-header index-header">
+    <header class="main-header">
       <div class="sub-container">
         <a class="site-logo">
           <img src="img/icons/logo-device.svg" alt="Логотив Device" width="163" height="35">
@@ -23,16 +23,16 @@
             <label class="search-label" for="search">Найти</label>
           </form>
           <ul class="sup-nav-user no-bullets">
-            <li class="nav-user-item user-login">
+            <li class="nav-user-item header-login">
               <a class="basic-link-sm" href="#" aria-label="Вход в личный аккаунт">Войти</a>
             </li>
           </ul>
           <ul class="sup-nav-products no-bullets">
-            <li class="nav-products-item compare">
-              <a class="sup-nav-compare basic-link-sm" href="#" aria-label="Сравнить выбранные товары">Сравнить</a>
+            <li class="nav-products-item header-compare">
+              <a class="basic-link-sm" href="#" aria-label="Сравнить выбранные товары">Сравнить</a>
             </li>
-            <li class="nav-products-item cart">
-              <a class="sup-nav-cart basic-link-sm" href="#">Корзина</a>
+            <li class="nav-products-item header-cart">
+              <a class="basic-link-sm" href="#">Корзина</a>
             </li>
           </ul>
 
@@ -93,19 +93,19 @@
   </div>
   <main>
     <div class="main-container">
-      <section class="main-slider">
+      <section class="main-slider index-mount">
         <div class="sub-container">
           <h1 class="visually-hidden">Хиты продаж</h1>
           <ul class="no-bullets">
-            <li class="card card-active">
+            <li class="card card-active card-selfie">
               <h2 class="visually-hidden">Самая длинная палка для селфи</h2>
               <img src="img/selfie-stick.png" alt="Самая длинная селфи палка" width="384" height="486">
               <div class="card-text-wrapper">
                 <h3 class="main-heading">Делай селфи, <br> как Бен Стиллер!</h3>
                 <span class="slide-number">01</span>
                 <p class="card-descr">
-                  Самая длинная палка для селфи доступна в нашем магазине. Восемь
-                  (Восемь, Карл!) метров длиной и весом всего 5 килограмм
+                  Самая длинная палка для селфи доступна в нашем магазине. <br> Восемь
+                  (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                 </p>
                 <a class="learn-more basic-link-md link-decor" href="#"
                   aria-label="Ссылка на подробное описание товара">Подробнее</a>
@@ -123,14 +123,14 @@
                 </table>
               </div>
             </li>
-            <li class="card">
+            <li class="card card-tracker">
               <h2 class="visually-hidden">Мотивирующий фитнес-браслет</h2>
               <img src="img/fitness-tracker.png" alt="Мотивирующий фитнес-браслет" width="345" height="485">
               <div class="card-text-wrapper">
                 <h3 class="main-heading">Худеем <br> правильно!</h3>
                 <span class="slide-number">02</span>
                 <p class="card-descr">
-                  Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+                  Мотивирующие фитнес-браслеты помогут найти в себе силы <br> не пропускать занятия и соблюдать диету.
                 </p>
                 <a class="learn-more basic-link-md link-decor" href="#"
                   aria-label="Ссылка на подробное описание товара">Подробнее</a>
@@ -144,7 +144,7 @@
                 </table>
               </div>
             </li>
-            <li class="card">
+            <li class="card card-drone">
               <h2 class="visually-hidden">Квадрокоптер с мощным лазером</h2>
               <img src="img/drone.png" alt="Квадрокоптер с мощным лазером" width="526" height="334">
               <div class="card-text-wrapper">
@@ -230,16 +230,16 @@
         <h2 class="visually-hidden">Наши услуги</h2>
         <ul class="services-collapse no-bullets">
           <li class="services-collapse-item">
-            <button class="service-name service-name-active basic-link-md link-decor" href="#"
+            <button class="service-name service-delivery service-name-active basic-link-md link-decor" href="#"
               aria-label="Показать описание услуги" data-service-cotrol="slide-1">Доставка</button>
           </li>
           <li class="services-collapse-item">
-            <button class="service-name basic-link-md link-decor" href="#" aria-label="Показать описание услуги"
-              data-service-cotrol="slide-2">Гарантия</button>
+            <button class="service-name service-warranty basic-link-md link-decor" href="#"
+              aria-label="Показать описание услуги" data-service-cotrol="slide-2">Гарантия</button>
           </li>
           <li class="services-collapse-item">
-            <button class="service-name basic-link-md link-decor" href="#" aria-label="Показать описание услуги"
-              data-service-cotrol="slide-3">Кредит</button>
+            <button class="service-name service-credit basic-link-md link-decor" href="#"
+              aria-label="Показать описание услуги" data-service-cotrol="slide-3">Кредит</button>
           </li>
         </ul>
         <ul class="services-descr no-bullets">
@@ -294,7 +294,7 @@
           <p class="descr">Мы можем доставить ваш товар в самые отдаленные точки <br> России! DEVICE работает со многими
             транспортными
             компаниями:</p>
-          <ul class="partners basic-link-md">
+          <ul class="partners no-bullets">
             <li class="partners-item">Деловые линни</li>
             <li class="partners-item">Автотрейдинг</li>
             <li class="partners-item">ЖелДорЭкспедиция</li>
@@ -367,24 +367,26 @@
       <div class="main-footer-right">
         <div class="footer-sup-nav">
           <ul class="sup-nav-user no-bullets">
-            <li>
-              <a class="login basic-link-sm" href="#" aria-label="Войти в личный аккаунт">Войти</a>
+            <li class="footer-login">
+              <a class="basic-link-sm" href="#" aria-label="Войти в личный аккаунт">Войти</a>
             </li>
           </ul>
           <ul class="sup-nav-products no-bullets">
-            <li class="compare">
-              <a class="sup-nav-compare basic-link-sm" href="#" aria-label="Сравнить выбранные товары">Сравнить</a>
+            <li class="footer-compare">
+              <a class="basic-link-sm" href="#" aria-label="Сравнить выбранные товары">Сравнить</a>
             </li>
-            <li class="cart">
-              <a class="sup-nav-cart basic-link-sm" href="#">Корзина</a>
+            <li class="footer-cart">
+              <a class="basic-link-sm" href="#">Корзина</a>
             </li>
           </ul>
         </div>
-        <a class="phone basic-link-sm" href="tel:+74954959595" aria-label="Наш телефон">Тел.: +7 (495) 495-95-95</a>
-        <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на сайт HTML Academy">
+        <a class="footer-phone basic-link-sm" href="tel:+74954959595" aria-label="Наш телефон">Тел.: +7 (495)
+          495-95-95</a>
+        <a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss"
+          aria-label="Ссылка на сайт HTML Academy">
           <span class="visually-hidden">HTML Academy</span>
-          <svg class="icon" width="27" height="32">
-            <use xlink:href="img/icons/sprite.svg#logo-html"></use>
+          <svg class="icon" width="27" height="34">
+            <use xlink:href="img/icons/academy-logo.svg#logo-html"></use>
           </svg>
         </a>
       </div>

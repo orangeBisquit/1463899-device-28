@@ -27,14 +27,11 @@ var serviceButtons = document.querySelectorAll(".service-name");
 serviceButtons.forEach(function (item) {
   item.addEventListener("click", function (evt) {
     evt.preventDefault();
-
     var currentSlide = item.dataset.serviceCotrol;
-
     document
       .querySelector(".service-name" + ".service-name-active")
       .classList.remove("service-name-active");
     item.classList.add("service-name-active");
-
     document
       .querySelector(".services-descr-item" + ".descr-item-active")
       .classList.remove("descr-item-active");
