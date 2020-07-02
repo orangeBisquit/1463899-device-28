@@ -62,6 +62,7 @@
   height: 1px;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
 }
@@ -72,6 +73,7 @@
 }
 body {
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   margin: 0;
   padding: 0;
@@ -416,6 +418,7 @@ body {
   display: none;
   position: absolute;
   z-index: 10;
+  grid-template-columns: -webkit-min-content -webkit-min-content -webkit-min-content;
   grid-template-columns: min-content min-content min-content;
   grid-column-gap: 55px;
   padding-top: 21px;
@@ -787,10 +790,12 @@ body {
 .featured-brands img {
   transition: 0.4s;
   opacity: 0.2;
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 .featured-brands img:hover {
   opacity: 1;
+  -webkit-filter: none;
   filter: none;
 }
 /* About Us, Contacts Layout */
@@ -881,6 +886,7 @@ body {
 .main-footer .main-container {
   display: grid;
   grid-template-columns: 350px 460px 350px;
+  grid-template-rows: -webkit-min-content;
   grid-template-rows: min-content;
   min-height: 214px;
 }
@@ -1080,6 +1086,7 @@ body {
 /* Products wrapper */
 .products-wrapper {
   display: grid;
+  grid-template-rows: -webkit-min-content -webkit-min-content;
   grid-template-rows: min-content min-content;
   grid-template-columns: 328px 760px;
   grid-row-gap: 70px;
@@ -1572,6 +1579,16 @@ body {
   border: 0;
   background-color: var(--input-background);
 }
+.write-us-name input:hover::-webkit-input-placeholder,
+.write-us-email input:hover::-webkit-input-placeholder,
+.write-us-message textarea:hover::-webkit-input-placeholder {
+  background-color: var(--input-background-hover);
+}
+.write-us-name input:hover::-moz-placeholder,
+.write-us-email input:hover::-moz-placeholder,
+.write-us-message textarea:hover::-moz-placeholder {
+  background-color: var(--input-background-hover);
+}
 .write-us-name input:hover,
 .write-us-email input:hover,
 .write-us-message textarea:hover,
@@ -1579,6 +1596,16 @@ body {
 .write-us-email input:hover::placeholder,
 .write-us-message textarea:hover::placeholder {
   background-color: var(--input-background-hover);
+}
+.write-us-name input:focus::-webkit-input-placeholder,
+.write-us-email input:focus::-webkit-input-placeholder,
+.write-us-message textarea:focus::-webkit-input-placeholder {
+  background-color: var(--basic-white);
+}
+.write-us-name input:focus::-moz-placeholder,
+.write-us-email input:focus::-moz-placeholder,
+.write-us-message textarea:focus::-moz-placeholder {
+  background-color: var(--basic-white);
 }
 .write-us-name input:focus,
 .write-us-email input:focus,
@@ -1593,6 +1620,16 @@ body {
 .write-us-message textarea:focus {
   outline: 2px solid var(--special-yellow);
 }
+.write-us-name input:invalid::-webkit-input-placeholder,
+.write-us-email input:invalid::-webkit-input-placeholder,
+.write-us-message textarea:invalid::-webkit-input-placeholder {
+  background-color: var(--input-background-invalid);
+}
+.write-us-name input:invalid::-moz-placeholder,
+.write-us-email input:invalid::-moz-placeholder,
+.write-us-message textarea:invalid::-moz-placeholder {
+  background-color: var(--input-background-invalid);
+}
 .write-us-name input:invalid,
 .write-us-email input:invalid,
 .write-us-message textarea:invalid,
@@ -1600,6 +1637,24 @@ body {
 .write-us-email input:invalid::placeholder,
 .write-us-message textarea:invalid::placeholder {
   background-color: var(--input-background-invalid);
+}
+.write-us-name input::-webkit-input-placeholder,
+.write-us-email input::-webkit-input-placeholder,
+.write-us-message textarea::-webkit-input-placeholder {
+  font-family: var(--font-open-sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  background-color: var(--input-background);
+}
+.write-us-name input::-moz-placeholder,
+.write-us-email input::-moz-placeholder,
+.write-us-message textarea::-moz-placeholder {
+  font-family: var(--font-open-sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  background-color: var(--input-background);
 }
 .write-us-name input::placeholder,
 .write-us-email input::placeholder,
