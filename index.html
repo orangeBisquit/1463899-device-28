@@ -184,42 +184,42 @@
         <ul class="no-bullets">
           <li class="product-line-item">
             <h3 class="product-name virtual-reality">
-              <a class="basic-link-md" href="#">
+              <a class="basic-link-md" href="vr.html">
                 <span>Виртуальная реальность</span>
               </a>
             </h3>
           </li>
           <li class="product-line-item">
             <h3 class="product-name monopod">
-              <a class="basic-link-md" href="#">
+              <a class="basic-link-md" href="monopods.html">
                 <span>Моноподы <br> для селфи</span>
               </a>
             </h3>
           </li>
           <li class="product-line-item">
             <h3 class="product-name action-camera">
-              <a class="basic-link-md" href="#">
+              <a class="basic-link-md" href="action-camera.html">
                 <span>Экшн-камеры</span>
               </a>
             </h3>
           </li>
           <li class="product-line-item">
             <h3 class="product-name fintess-tracker">
-              <a class="basic-link-md" href="#">
+              <a class="basic-link-md" href="fitness-tracker.html">
                 <span>Фитнес-браслеты</span>
               </a>
             </h3>
           </li>
           <li class="product-line-item">
             <h3 class="product-name smart-watch">
-              <a class="basic-link-md" href="#">
+              <a class="basic-link-md" href="smart-watch.html">
                 <span>Умные часы</span>
               </a>
             </h3>
           </li>
           <li class="product-line-item">
             <h3 class="product-name drone">
-              <a class="basic-link-md" href="#">
+              <a class="basic-link-md" href="drones.html">
                 <span>Квадрокоптеры</span>
               </a>
             </h3>
@@ -309,10 +309,10 @@
             покупки.
             Всякое
             бывает.</p>
-          <a class="device-map" href="#">
+          <a class="device-map" href="#" aria-label="Открыть интерактивную карту">
             <img src="img/bg-map-mini.jpg" alt="Наше расположение на карте" width="560" height="222">
           </a>
-          <a class="basic-link-md write-us link-decor" href="#">Напишите нам</a>
+          <a class="basic-link-md write-us-trigger link-decor" href="#">Напишите нам</a>
         </section>
       </div>
     </div>
@@ -320,7 +320,7 @@
   <footer class="main-footer">
     <div class="main-container">
       <div class="main-footer-left">
-        <a class="site-logo" href="#">
+        <a class="site-logo">
           <img src="img/icons/footer-logo.svg" alt="Логотив Device" width="163" height="35">
         </a>
         <p class="address" aria-label="Наш адрес">г. Москва, ул. Строителей, 15</p>
@@ -393,26 +393,36 @@
     </div>
   </footer>
 
-  <!-- Hogwarts-->
-  <section class="write-us visually-hidden">
+  <section class="write-us">
     <h2 class="visually-hidden">Напишите нам</h2>
-    <form action="https://echo.htmlacademy.ru/" method="get">
-      <p>
-        <label for="query-name">Ваше имя:</label>
-        <input id="query-name" name="query-name" type="text" placeholder="Имя Фамилия">
+    <form class="write-us-from" action="https://echo.htmlacademy.ru/" method="get">
+      <button class="modal-close" type="button" aria-label="Закрыть форму"></button>
+      <p class="write-us-name">
+        <label for="write-us-name">Ваше имя:</label>
+        <input id="write-us-name" class="write-input-name" name="write-us-name" type="text" placeholder="Имя Фамилия">
       </p>
-      <p>
+      <p class="write-us-email">
         <label for="query-email">Ваш e-mail:</label>
-        <input id="query-email" name="query-email" type="email" placeholder="email@example.com">
+        <input id="query-email" class="write-input-email" name="query-email" type="email"
+          placeholder="email@example.com">
       </p>
-      <p>
+      <p class="write-us-message">
         <label for="query-message">Текст письма:</label>
         <textarea id="query-message" name="query-message" placeholder="В свободной форме"></textarea>
       </p>
-      <button type="submit">Отправить</button>
+      <button class="basic-link-md link-decor" type="submit">Отправить</button>
     </form>
   </section>
-  <!--  -->
+
+  <section class="our-location">
+    <div class="modal-close-wrap">
+      <button class="map-modal-close" type="button" aria-label="Закрыть форму"></button>
+    </div>
+    <iframe class="interactive-map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.527429316157814!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2sUlitsa%20Stroiteley%2C%2015%2C%20Moskva%2C%20Russia%2C%20119311!5e0!3m2!1sen!2skg!4v1593698796107!5m2!1sen!2skg"
+      style="border:0;" allowfullscreen></iframe>
+  </section>
+
   <script src="js/script.js"></script>
 </body>
 
