@@ -1524,6 +1524,7 @@ body {
 }
 .page-num-item a {
   display: inline-block;
+  vertical-align: middle;
   padding: 13px 7px;
   margin: 0 7px;
   opacity: 0.3;
