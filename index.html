@@ -18,9 +18,10 @@
         <section class="header-sup-nav">
           <h2 class="visually-hidden">Пользовательская навигация</h2>
           <form class="sup-nav-search" method="get" action="https://echo.htmlacademy.ru">
+            <label class="visually-hidden" for="search">Найти</label>
             <input id="search" class="search-input" name="search" type="search" aria-label="Поиск по сайту"
               placeholder="Поиск по сайту">
-            <label class="search-label" for="search">Найти</label>
+            <button class="search-label" for="search" type="submit">Найти</button>
           </form>
           <ul class="sup-nav-user no-bullets">
             <li class="nav-user-item header-login">
@@ -35,7 +36,6 @@
               <a class="basic-link-sm" href="#">Корзина</a>
             </li>
           </ul>
-
         </section>
         <nav class="main-nav">
           <h2 class="visually-hidden">Навигация по сайту</h2>
@@ -226,8 +226,10 @@
           </li>
         </ul>
       </section>
-      <section id="services" class="services">
-        <h2 class="visually-hidden">Наши услуги</h2>
+    </div>
+    <section id="services" class="services">
+      <h2 class="visually-hidden">Наши услуги</h2>
+      <div class="main-container">
         <ul class="services-collapse no-bullets">
           <li class="services-collapse-item">
             <button class="service-name service-delivery service-name-active basic-link-md link-decor"
@@ -261,7 +263,9 @@
               вас наиболее выгодные <br> условия кредита. Выгодные для нашего банка, разумеется.</p>
           </li>
         </ul>
-      </section>
+      </div>
+    </section>
+    <div class="main-container">
       <section class="featured-brands">
         <h2 class="visually-hidden">Рекомендуемые бренды товаров</h2>
         <ul class="no-bullets">
@@ -301,7 +305,6 @@
           </ul>
           <a class="learn-more basic-link-md link-decor" href="about.html">Подробнее о нас</a>
         </section>
-
         <section class="our-contacts">
           <h2 class="main-heading">Контакты</h2>
           <p class="descr">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить
@@ -392,7 +395,6 @@
       </div>
     </div>
   </footer>
-
   <section class="write-us">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form class="write-us-from" action="https://echo.htmlacademy.ru/" method="get">
@@ -413,7 +415,6 @@
       <button class="basic-link-md link-decor" type="submit">Отправить</button>
     </form>
   </section>
-
   <section class="our-location">
     <div class="modal-close-wrap">
       <button class="map-modal-close" type="button" aria-label="Закрыть форму"></button>

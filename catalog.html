@@ -18,9 +18,10 @@
 				<section class="header-sup-nav">
 					<h2 class="visually-hidden">Пользовательская навигация</h2>
 					<form class="sup-nav-search" method="get" action="https://echo.htmlacademy.ru">
+						<label class="visually-hidden" for="search">Найти</label>
 						<input id="search" class="search-input" name="search" type="search" aria-label="Поиск по сайту"
 							placeholder="Поиск по сайту">
-						<label class="search-label" for="search">Найти</label>
+						<button class="search-label" for="search" type="submit">Найти</button>
 					</form>
 					<ul class="sup-nav-user no-bullets">
 						<li class="nav-user-item header-name">
@@ -93,7 +94,7 @@
 			</div>
 		</header>
 	</div>
-	<main>
+	<main class="main">
 		<div class="main-container">
 			<div class="sub-container">
 				<section class="product-line-page">
@@ -112,8 +113,28 @@
 				</section>
 			</div>
 			<div class="products-wrapper">
-				<section class="side-filters">
+				<div class="filters-heading-wrapper">
 					<h2 class="filters-heading">Фильтр:</h2>
+				</div>
+				<section class="top-sorting">
+					<h2 class="sorting-heading">Сортировка:</h2>
+					<ul class="sorting-options no-bullets">
+						<li>
+							<a class="sorting-option-item option-active" href="#">По цене</a>
+						</li>
+						<li>
+							<a class="sorting-option-item" href="#">По типу</a>
+						</li>
+						<li>
+							<a class="sorting-option-item" href="#">По популярности</a>
+						</li>
+					</ul>
+					<div class="sorting-buttons">
+						<a class="arrow arrow-ascending arrow-current" href="#" aria-label="Сортировать по возрастанию"></a>
+						<a class="arrow arrow-descending" href="#" aria-label="Сортировать по убыванию"></a>
+					</div>
+				</section>
+				<section class="side-filters">
 					<form action="https://echo.htmlacademy.ru/" method="post">
 						<fieldset class="filter-price filter-item">
 							<h3 class="filter-legend">Стоимость</h3>
@@ -173,24 +194,6 @@
 						<button class="submit-button basic-link-md link-decor" type="submit"
 							aria-label="Показать товары с учетом выбранных фильтров">Показать</button>
 					</form>
-				</section>
-				<section class="top-sorting">
-					<h2 class="sorting-heading">Сортировка:</h2>
-					<ul class="sorting-options no-bullets">
-						<li>
-							<a class="sorting-option-item option-active" href="#">По цене</a>
-						</li>
-						<li>
-							<a class="sorting-option-item" href="#">По типу</a>
-						</li>
-						<li>
-							<a class="sorting-option-item" href="#">По популярности</a>
-						</li>
-					</ul>
-					<div class="sorting-buttons">
-						<a class="arrow arrow-ascending arrow-current" href="#" aria-label="Сортировать по возрастанию"></a>
-						<a class="arrow arrow-descending" href="#" aria-label="Сортировать по убыванию"></a>
-					</div>
 				</section>
 				<section class="catalog">
 					<ul class="catalog-gallery no-bullets">
@@ -278,7 +281,6 @@
 					<img src="img/icons/footer-logo.svg" alt="Логотив Device" width="163" height="35">
 				</a>
 				<p class="address" aria-label="Наш адрес">г. Москва, ул. Строителей, 15</p>
-
 			</div>
 			<div class="main-footer-center">
 				<ul class="footer-nav no-bullets">
