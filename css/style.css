@@ -743,32 +743,46 @@ body .main {
 .services-descr-item {
   display: none;
   padding-top: 30px;
-  padding-right: 200px;
+  padding-right: 190px;
   padding-bottom: 25px;
+  overflow: visible;
 }
 .services-descr .descr-item-active {
   display: block;
+  position: relative;
 }
-.services-descr-item.service-delivery {
+.services-descr-item.service-delivery::after {
+  position: absolute;
+  top: 30px;
+  right: 2px;
   background-image: url("../img/icons/delivery.svg");
   background-repeat: no-repeat;
-  background-size: 136px 164px;
-  background-position-y: 30px;
-  background-position-x: 622px;
+  background-size: cover;
+  width: 136px;
+  height: 164px;
+  content: "";
 }
-.services-descr-item.service-warranty {
+.services-descr-item.service-warranty::after {
+  position: absolute;
+  top: 12px;
+  right: -16px;
   background-image: url("../img/icons/warranty.svg");
   background-repeat: no-repeat;
-  background-size: 171px 195px;
-  background-position-y: 12px;
-  background-position-x: 605px;
+  background-size: cover;
+  width: 171px;
+  height: 195px;
+  content: "";
 }
-.services-descr-item.service-credit {
+.services-descr-item.service-credit::after {
+  position: absolute;
+  top: 7px;
+  right: 8px;
   background-image: url("../img/icons/credit.svg");
   background-repeat: no-repeat;
-  background-size: 156px 188px;
-  background-position-y: 7px;
-  background-position-x: 596px;
+  background-size: cover;
+  width: 156px;
+  height: 188px;
+  content: "";
 }
 .services-descr::before {
   display: block;
@@ -1728,12 +1742,12 @@ body .main {
 }
 .write-us-name input,
 .write-us-email input {
-  margin-bottom: 32px;
+  margin-bottom: 34px;
   padding: 16px 20px 15px;
   width: 360px;
 }
 .write-us .write-us-name {
-  margin-right: 20px;
+  margin-right: 40px;
 }
 .write-us-message textarea {
   margin-bottom: 45px;
