@@ -679,9 +679,9 @@ body .main {
 .services .main-container {
   display: grid;
   position: relative;
-  grid-template-columns: 284px 888px;
-  margin-bottom: 98px;
-  padding-bottom: 61px;
+  grid-template-columns: 284px 876px;
+  margin-bottom: 90px;
+  padding-bottom: 68px;
 }
 .services {
   position: relative;
@@ -690,11 +690,7 @@ body .main {
   display: block;
   position: absolute;
   top: 100px;
-  right: 50%;
-  left: 50%;
   z-index: -1;
-  margin-right: -50vw;
-  margin-left: -50vw;
   background-color: var(--basic-grey-light);
   width: 100%;
   height: calc(100% - 100px);
@@ -791,7 +787,7 @@ body .main {
 }
 /* Featured Brands */
 .featured-brands {
-  margin-bottom: 85px;
+  margin-bottom: 86px;
 }
 .featured-brands ul {
   display: flex;
@@ -1420,10 +1416,10 @@ body .main {
 .catalog .catalog-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-row-gap: 50px;
+  grid-row-gap: 48px;
   grid-column-gap: 40px;
   margin-top: 70px;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 .catalog-item {
   position: relative;
@@ -1511,7 +1507,7 @@ body .main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 79px;
+  margin-bottom: 78px;
   background-color: var(--special-grey);
   width: 100%;
 }
